@@ -1,0 +1,164 @@
+.portfolio-experiment a {
+  color: #f8ffce;
+  padding: 0.7em calc(0.7em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 45x;
+  font-weight: 900;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  font-family: 'Open Sans';
+  text-decoration: none; }
+  .portfolio-experiment a .text {
+    font-family: 'Open Sans';
+    -webkit-transform: translate3d(0, 0.7em, 0);
+    transform: translate3d(0, 0.7em, 0);
+    display: block;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    -o-transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s, -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+  .portfolio-experiment a:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: #4fffb2;
+    -webkit-transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    -o-transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }
+
+.portfolio-experiment .line {
+  position: absolute;
+  background: #4fffb2; }
+  .portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1); }
+  .portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1); }
+  .portfolio-experiment .line.-right {
+    right: -3px;
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    -o-transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s, -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top; }
+  .portfolio-experiment .line.-top {
+    top: -3px;
+    -webkit-transition: -webkit-transform 0.08s linear 0.43s;
+    transition: -webkit-transform 0.08s linear 0.43s;
+    -o-transition: transform 0.08s linear 0.43s;
+    transition: transform 0.08s linear 0.43s;
+    transition: transform 0.08s linear 0.43s, -webkit-transform 0.08s linear 0.43s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }
+  .portfolio-experiment .line.-left {
+    left: -3px;
+    -webkit-transition: -webkit-transform 0.08s linear 0.51s;
+    transition: -webkit-transform 0.08s linear 0.51s;
+    -o-transition: transform 0.08s linear 0.51s;
+    transition: transform 0.08s linear 0.51s;
+    transition: transform 0.08s linear 0.51s, -webkit-transform 0.08s linear 0.51s;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom; }
+  .portfolio-experiment .line.-bottom {
+    bottom: -3px;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    -o-transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01), -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right; }
+
+.portfolio-experiment a:hover .text,
+.portfolio-experiment a:active .text {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  -o-transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s, -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+
+.portfolio-experiment a:hover:after,
+.portfolio-experiment a:active:after {
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  -o-transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s; }
+
+.portfolio-experiment a:hover .line,
+.portfolio-experiment a:active .line {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+  .portfolio-experiment a:hover .line.-right,
+  .portfolio-experiment a:active .line.-right {
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    -o-transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s, -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom; }
+  .portfolio-experiment a:hover .line.-top,
+  .portfolio-experiment a:active .line.-top {
+    -webkit-transition: -webkit-transform 0.08s linear 0.4s;
+    transition: -webkit-transform 0.08s linear 0.4s;
+    -o-transition: transform 0.08s linear 0.4s;
+    transition: transform 0.08s linear 0.4s;
+    transition: transform 0.08s linear 0.4s, -webkit-transform 0.08s linear 0.4s;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right; }
+  .portfolio-experiment a:hover .line.-left,
+  .portfolio-experiment a:active .line.-left {
+    -webkit-transition: -webkit-transform 0.08s linear 0.48s;
+    transition: -webkit-transform 0.08s linear 0.48s;
+    -o-transition: transform 0.08s linear 0.48s;
+    transition: transform 0.08s linear 0.48s;
+    transition: transform 0.08s linear 0.48s, -webkit-transform 0.08s linear 0.48s;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top; }
+  .portfolio-experiment a:hover .line.-bottom,
+  .portfolio-experiment a:active .line.-bottom {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    -o-transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s, -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }

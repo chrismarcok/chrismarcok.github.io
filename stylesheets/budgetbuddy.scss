@@ -1,0 +1,309 @@
+$white: #fafafa;
+$off-white: #e0d4e5;
+$black: #000;
+$accent-color: #5D3F6A;
+$accent-color-light: #664575;
+$footer: #3F4354;
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-width: 300px;
+    background-color: $white;
+    font-family: 'Roboto';
+}
+
+/* ----------------------------
+----- jumbotron
+-----------------------------*/
+
+.budgetbuddy-logo {
+    opacity: 0;
+    background-size: 252px 252px;
+    background-image: url("../images/budgetbuddy/bblogolarge.png");
+    width: 250px;
+    height: 250px;
+    background-color: $white;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s ease;
+}
+
+.budgetbuddy-logo a {
+    display: block;
+    height: 100%;
+}
+
+.budgetbuddy-logo:hover {
+    box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s ease;
+}
+
+.jumbotron {
+    width: 100%;
+    text-align: center;
+}
+
+.display-4 {
+    opacity: 0;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.lead {
+    opacity: 0;
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+.jumbotron-buttons {
+    margin: 75px;
+}
+
+.download-button {
+    min-width: 150px;
+    position: relative;
+    background-color: $accent-color;
+    padding: 20px;
+    padding-top: 25px;
+    display: inline;
+}
+
+.logoContainer {
+    float: left;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.logoContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.download-button {
+    border-radius: 3px;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+    transition: all 0.25s ease;
+}
+
+.download-button:hover {
+    background-color: $accent-color-light;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+}
+
+.download-button p {
+    float: right;
+    text-decoration: none;
+    color: $white;
+    font-size: 25px;
+}
+
+/* ----------------------------
+----- display
+-----------------------------*/
+
+.dark-box {
+    width: 100%;
+    background-color: $accent-color;
+    text-align: center;
+}
+
+.dark-box p {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 40px;
+    color: $white;
+}
+
+.displaypic-logoContainer {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    max-width: 700px;
+    margin-bottom: 0px;
+    padding-bottom: -10px;
+}
+
+.displaypic-logoContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 200px;
+    vertical-align: bottom;
+}
+
+/* ----------------------------
+----- features
+-----------------------------*/
+
+.light-box {
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+}
+
+.light-box p {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 40px;
+    color: $black;
+}
+
+.features-container p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 24px;
+}
+
+.features-container ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 75px;
+}
+
+.features-container ul li {
+    vertical-align: top;
+    display: inline-block;
+    width: 230px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $accent-color-light;
+    border-radius: 2px;
+}
+
+.features-container img {
+    padding: 83px;
+}
+
+.features-container ul li p {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+/* ----------------------------
+----- download
+-----------------------------*/
+
+.download {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: $accent-color;
+    text-align: center;
+}
+
+.individual-button {
+    border-radius: 3px;
+    display: inline-block;
+    background-color: $white;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: all .3s ease;
+}
+
+.individual-button2 {
+    border-radius: 3px;
+    display: inline-block;
+    background-color: $white;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    padding: 20px;
+    padding-right: 25px;
+    transition: all .3s ease;
+}
+
+.download-buttons {
+    padding-bottom: 75px;
+}
+
+.download-buttons p {
+    font-size: 24px;
+    color: $black;
+    float: right;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.individual-button:hover {
+    background-color: $off-white;
+    transition: all .3s ease;
+}
+
+/* ----------------------------
+----- Credits
+-----------------------------*/
+
+.home-a {
+    text-decoration: none;
+}
+
+.home {
+    border-radius: 3px;
+    background-color: $accent-color;
+    margin: auto;
+    margin-bottom: 75px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.home:hover {
+    background-color: $accent-color-light;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+}
+
+.home p {
+    padding-bottom: 0px;
+    color: white;
+    font-size: 28px;
+}
+
+.box-text p {
+    padding-top: 0px;
+    margin: 0px;
+    margin-left: calc(40% - 100px);
+    margin-right: calc(40% - 100px);
+    font-size: 24px;
+}
+
+/* ----------------------------
+----- footer
+-----------------------------*/
+
+#footer {
+    width: 100%;
+    text-align: center;
+    background-color: $footer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#footer p {
+    font-size: 14px;
+    color: $white;
+}
