@@ -28,10 +28,10 @@ var playPause = anime({
 });
 
 */
-
+var numProjects = 7;
 var expand = anime({
       targets: 'div.box2bg',
-      height: 2400,
+      height: (numProjects * 400) - 75,
       duration: 1250,
       autoplay: false,
       easing: 'easeOutSine'

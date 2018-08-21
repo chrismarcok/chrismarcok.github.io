@@ -201,6 +201,7 @@ body {
     padding-top: 0px;
 }
 
+
 /* ----------------------------
 ----- download
 -----------------------------*/
@@ -253,13 +254,11 @@ body {
     transition: all .3s ease;
 }
 
-/* ----------------------------
------ Credits
------------------------------*/
 
-.home-a {
-    text-decoration: none;
-}
+
+/* ----------------------------
+----- about
+-----------------------------*/
 
 .home {
     border-radius: 3px;
@@ -277,13 +276,15 @@ body {
     transition: all 0.3s ease;
 }
 
-.home p {
+.home h5{
+    text-align: center;
     padding-bottom: 0px;
-    color: white;
+    color: $white;
     font-size: 28px;
 }
 
 .box-text p {
+  text-align:justify;
     padding-top: 0px;
     margin: 0px;
     margin-left: calc(40% - 100px);

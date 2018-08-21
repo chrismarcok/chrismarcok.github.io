@@ -238,18 +238,21 @@ nav ul ul li a {
     opacity: 1;
 }
 
-#finalWrap {
-    margin-bottom: 5px;
-}
 
 .left {
     width: 300px;
-    background-color: black;
+    background-color: $dark-green;
     border-radius: 100%;
     height: 300px;
     float: left;
     margin-left: 25%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s ease;
+}
+
+.left:hover{
+  box-shadow: 0 16px 64px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s ease;
 }
 
 .left a {
@@ -294,27 +297,31 @@ nav ul ul li a {
 }
 
 #proj0 {
-    background-image: url("../images/projects/sky.png")
+    background-image: url("/images/projects/sky.png")
 }
 
 #proj1 {
-    background-image: url("../images/projects/chess.jpg")
+    background-image: url("/images/projects/chess.jpg")
 }
 
 #proj2 {
-    background-image: url("../images/projects/calc.png")
+    background-image: url("/images/projects/calc.png")
 }
 
 #proj3 {
-    background-image: url("../images/projects/Euler.png")
+    background-image: url("/images/projects/Euler.png")
 }
 
 #proj4 {
-    background-image: url("../images/projects/graph2.png")
+    background-image: url("/images/projects/graph2.png")
 }
 
 #proj5 {
-    background-image: url("../images/projects/leetcode.png")
+    background-image: url("/images/projects/leetcode.png")
+}
+
+#proj6 {
+    background-image: url("/images/projects/paint.png")
 }
 
 /* ----------------------------
