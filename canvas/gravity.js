@@ -50,6 +50,7 @@ function Ball(x, y, velocity, dx, radius, color) {
     this.acceleration = 1;
     this.velocity = velocity;
     this.dx = dx;
+    this.lastPoint = {x: x, y: y};
 
     this.update = () => {
         if (this.y + this.radius + this.velocity >= innerHeight){
@@ -65,11 +66,14 @@ function Ball(x, y, velocity, dx, radius, color) {
         }
 
         if (this.velocity <= 0.00001 && this.velocity > -0.5){
-          this.radius -= .5;
+          this.radius -= 1;
         }
         if (this.radius <= 0){
           this.radius = 0;
         }
+
+        this.lastPoint.x = this.x;
+        this.lastPoint.y = this.y;
 
         this.x += this.dx;
         this.y += this.velocity;
@@ -78,10 +82,17 @@ function Ball(x, y, velocity, dx, radius, color) {
     }
 
     this.draw = () => {
-        c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.fillStyle = this.color;
-        c.fill();
+      c.beginPath();
+      c.strokeStyle = this.color;
+      c.lineWidth = this.radius;
+      c.lineCap="round";
+      c.moveTo(this.lastPoint.x, this.lastPoint.y);
+      c.lineTo(this.x, this.y);
+      c.stroke();
+        // c.beginPath();
+        // c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        // c.fillStyle = this.color;
+        // c.fill();
         c.closePath();
     }
 }
@@ -92,14 +103,16 @@ function init() {
     particles = [];
 
     for (let i = 0; i < 500; i++) {
-        particles.push(new Ball((Math.random() * (canvas.width - 200)) + 100, Math.random() * (canvas.height - 100) + 30, 2, (Math.random() -0.5) * 24, Math.random() * 20 + 10, randomColor(colors)));
+        particles.push(new Ball((Math.random() * (canvas.width - 200)) + 100, Math.random() * (canvas.height - 100) + 30, 2, (Math.random() -0.5) * 24 , Math.random() * 30 + 10, randomColor(colors)));
     }
 }
 
 function animate() {
 
     requestAnimationFrame(animate);
-    c.clearRect(0, 0, innerWidth + 2000, innerHeight + 2000);
+    c.fillStyle = 'rgba(255,255,255, .5)';
+    c.fillRect(0, 0, innerWidth + 2000, innerHeight + 2000);
+    // c.clearRect(0, 0, innerWidth + 2000, innerHeight + 2000);
     particles.forEach(particle => {
         particle.update();
     });
