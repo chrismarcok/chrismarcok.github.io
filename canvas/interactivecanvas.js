@@ -53,85 +53,95 @@ var accent = "#FF1CAE";
 var colors = [accent, black, grey, darkgrey, lightgrey];
 
 var mouse = {
-  x: undefined,
-  y: undefined
+    x: undefined,
+    y: undefined
 }
 
 
 window.addEventListener("mousemove",
-  function(event){
-    mouse.x = event.x;
-    mouse.y = event.y;
-    console.log(mouse);
+    function(event) {
+        mouse.x = event.x;
+        mouse.y = event.y;
+        console.log(mouse);
+    });
+
+addEventListener('resize', () => {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    init();
 });
 
-function Circle(x,y,dx,dy,radius){
-  this.x = x;
-  this.y = y;
-  this.dx = dx;
-  this.dy = dy;
-  this.originalRadius = radius;
-  this.radius = radius;
-  this.color = colors[Math.ceil(Math.random() * colors.length - 1)]
+function Circle(x, y, dx, dy, radius) {
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
+    this.originalRadius = radius;
+    this.radius = radius;
+    this.color = colors[Math.ceil(Math.random() * colors.length - 1)]
 
-  this.draw = function(){
-    c.beginPath();
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.strokeStyle = this.color
-    c.fillStyle = this.color
-    c.stroke();
-    c.fill();
-  }
-
-  this.update = function(){
-    if (this.x + this.radius > innerWidth || this.x - this.radius < leftBorder){
-      this.dx *= -1;
-    }
-    if (this.y + this.radius > innerHeight || this.y - this.radius < 0){
-      this.dy *= -1;
+    this.draw = function() {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.strokeStyle = this.color
+        c.fillStyle = this.color
+        c.stroke();
+        c.fill();
     }
 
-    this.x += this.dx;
-    this.y += this.dy;
+    this.update = function() {
+        if (this.x + this.radius > innerWidth || this.x - this.radius < leftBorder) {
+            this.dx *= -1;
+        }
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.dy *= -1;
+        }
 
-    if (Math.abs(mouse.x - this.x) < 50 && Math.abs(mouse.y - this.y) < 50 ){
-      if (this.radius < 50){
-        this.radius += 20;
-      }
-    } else {
-      if (this.radius > this.originalRadius){
-        this.radius -= 3;
-      }
-      if (this.radius < 0){
-        this.radius = this.originalRadius;
-      }
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if (Math.abs(mouse.x - this.x) < 50 && Math.abs(mouse.y - this.y) < 50) {
+            if (this.radius < 50) {
+                this.radius += 20;
+            }
+        } else {
+            if (this.radius > this.originalRadius) {
+                this.radius -= 3;
+            }
+            if (this.radius < 0) {
+                this.radius = this.originalRadius;
+            }
+        }
+
+        this.draw();
     }
-
-    this.draw();
-  }
 }
 
 var circleArray = [];
 
-for (var i = 0; i < numCircles; i++){
-  var radius = 5 * (Math.random() * 2);
-  var x = Math.random() * (canvas.width - radius * 2)  + radius;
-  var dx = (Math.random() - .5) * 2;
-  var y = Math.random() * (canvas.height - radius * 2) + radius;
-  var dy = (Math.random() -.5) * 2;
+function init() {
+    circleArray = [];
+    for (var i = 0; i < numCircles; i++) {
+        var radius = 5 * (Math.random() * 2);
+        var x = Math.random() * (canvas.width - radius * 2) + radius;
+        var dx = (Math.random() - .5) * 2;
+        var y = Math.random() * (canvas.height - radius * 2) + radius;
+        var dy = (Math.random() - .5) * 2;
 
-  circleArray.push(new Circle(x,y,dx,dy,radius));
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+    }
 }
 
-function animate(){
+function animate() {
 
-  requestAnimationFrame(animate);
-  c.clearRect(0,0, innerWidth + 2000, innerHeight + 2000);
+    requestAnimationFrame(animate);
+    c.clearRect(0, 0, innerWidth + 2000, innerHeight + 2000);
 
-  for (var i = 0; i < circleArray.length; i++){
-    circleArray[i].update();
-  }
+    for (var i = 0; i < circleArray.length; i++) {
+        circleArray[i].update();
+    }
 
 }
-
+init();
 animate();

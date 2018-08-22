@@ -16,7 +16,18 @@ p {
   z-index: 1;
   color: white;
   position: absolute;
-  margin: 200px;
+  top: 50%;
+  margin-left: 50px;
   background: rgba(0, 0, 0, 0);
-  font-family: 'Roboto';
+  font-family: 'Quicksand', 'Roboto';
   font-size: 100px; }
+
+button {
+  z-index: 1;
+  position: absolute;
+  background-color: blue;
+  background: url("/images/pause.png") no-repeat;
+  border: none;
+  width: 64px;
+  height: 64px;
+  outline: none; }
