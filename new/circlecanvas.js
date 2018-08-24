@@ -9,7 +9,7 @@ var black = "#000";
 var grey = "#C0C0C0";
 var lightgrey = "	#778899";
 var darkgrey = "#2F4F4F	";
-var accent = "#FF1CAE";
+var accent = "#FF6F59";
 var colors = [accent, black, grey, darkgrey, lightgrey];
 
 var mouse = {
@@ -44,7 +44,7 @@ function Particle(x, y, radius, color) {
     this.radius = radius;
     this.color = color;
     this.radians = Math.random() * 100;
-    this.distanceFromCenter = randomIntFromRange(200, canvas.width);
+    this.distanceFromCenter = randomIntFromRange(50, Math.max(canvas.width,canvas.height));
     this.velocity = 1/this.distanceFromCenter;
     this.bool = false;
     this.lastPoint = {
