@@ -37,9 +37,9 @@ nav li {
   padding-bottom: 20px;
   list-style-type: none;
   background-color: #f2f2f2;
-  -webkit-transition: all .15s ease;
-  -o-transition: all .15s ease;
-  transition: all .15s ease;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
   color: black;
   font-size: 24px;
   font-family: "Raleway"; }
@@ -77,13 +77,16 @@ nav ul a {
 #small-nav li {
   color: black;
   display: inline-block;
-  padding: 15px; }
+  padding: 15px;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease; }
 
 #small-nav li:hover {
   background-color: #DB504A;
-  -webkit-transition: all .15s ease;
-  -o-transition: all .15s ease;
-  transition: all .15s ease;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
   color: white; }
 
 /**************
@@ -332,6 +335,9 @@ nav ul a {
   color: #f2f2f2;
   font-family: "Poppins"; }
 
+/**************
+  Media Queries
+**************/
 @media only screen and (max-width: 1050px) {
   nav li {
     -webkit-transition: all .0s ease;
@@ -341,28 +347,16 @@ nav ul a {
     visibility: hidden; }
   #small-nav {
     visibility: visible; }
-  .contact {
-    margin-left: 50px;
-    max-width: calc(100% - 100px); }
-  .projects {
-    margin-left: 50px;
-    max-width: calc(100% - 100px); }
-  .about {
-    margin-left: 50px;
-    max-width: calc(100% - 100px); }
+  .contact,
+  .projects,
+  .about,
   .filler {
     margin-left: 50px;
     max-width: calc(100% - 100px); } }
 
 @media only screen and (max-width: 650px) {
-  .about h1 {
-    width: calc(100% - 100px);
-    padding: 50px;
-    font-size: 70px; }
-  .projects h1 {
-    width: calc(100% - 100px);
-    padding: 50px;
-    font-size: 70px; }
+  .about h1,
+  .projects h1,
   .contact h1 {
     width: calc(100% - 100px);
     padding: 50px;
@@ -372,20 +366,14 @@ nav ul a {
   .email li {
     display: block; } }
 
-@media only screen and (max-width: 450px) {
-  .about h1 {
-    width: calc(100% - 100px);
-    padding: 20px;
-    font-size: 40px; }
-  .projects h1 {
-    width: calc(100% - 100px);
-    padding: 20px;
-    font-size: 40px; }
+@media only screen and (max-width: 500px) {
+  .about h1,
+  .projects h1,
   .contact h1 {
     width: calc(100% - 100px);
     padding: 20px;
     font-size: 40px; }
   #typed {
-    font-size: 85px; }
+    font-size: 70px; }
   .typed-cursor {
     font-size: 85px; } }
