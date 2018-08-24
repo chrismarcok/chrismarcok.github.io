@@ -199,18 +199,8 @@ body {
   -o-transition: all .3s ease;
   transition: all .3s ease; }
 
-.individual-button2 {
-  border-radius: 3px;
-  display: inline-block;
-  background-color: #fafafa;
-  margin-left: 3px;
-  margin-right: 3px;
-  margin-bottom: 15px;
-  padding: 20px;
-  padding-right: 25px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease; }
+#specialbtn {
+  padding-right: 25px; }
 
 .download-buttons {
   padding-bottom: 75px; }
