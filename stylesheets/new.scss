@@ -5,8 +5,12 @@ $lightgrey: #778899;
 $grey: #C0C0C0;
 $darkgrey: #2F4F4F;
 $accent: #FF6F59;
-$accent-light2: #ff71cc;
-$accent-light: #DB504A;
+$accent-dark: #DB504A;
+$accent-light: #e16b66;
+
+
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,17 +20,15 @@ a {
     text-decoration: none;
 }
 
-
 /**************
   Nav
 **************/
 
 $nav-width: 400px;
 $nav-width-50: calc(#{$nav-width} + 50px);
-
-#small-nav{
-  visibility:hidden;
-  position: absolute;
+#small-nav {
+    visibility: hidden;
+    position: absolute;
 }
 
 nav {
@@ -63,7 +65,7 @@ nav li {
 }
 
 nav li:hover {
-    background-color: $accent-light;
+    background-color: $accent-dark;
     transition: all .15s ease;
     color: white;
 }
@@ -71,15 +73,16 @@ nav li:hover {
 nav ul a {
     width: 100%;
 }
+
 /**************
   Small Nav
 **************/
 
-#small-nav{
-  padding-top: 25px;
-  width: 100%;
-  background-color: $white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 4px 8px 0 rgba(0, 0, 0, .1);
+#small-nav {
+    padding-top: 25px;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 4px 8px 0 rgba(0, 0, 0, .1);
 }
 
 #small-nav h1 {
@@ -88,21 +91,23 @@ nav ul a {
     font-size: 30px;
     color: $accent;
 }
-#small-nav ul{
-  font-family: "Poppins";
-  text-align: center;
-}
-#small-nav li{
-  color: black;
-  display: inline-block;
-  padding: 15px;
-  transition: all .15s ease;
+
+#small-nav ul {
+    font-family: "Poppins";
+    text-align: center;
 }
 
-#small-nav li:hover{
-  background-color: $accent-light;
-  transition: all .35s ease;
-  color: white;
+#small-nav li {
+    color: black;
+    display: inline-block;
+    padding: 15px;
+    transition: all .15s ease;
+}
+
+#small-nav li:hover {
+    background-color: $accent-dark;
+    transition: all .35s ease;
+    color: white;
 }
 
 /**************
@@ -114,6 +119,8 @@ nav ul a {
     height: 100vh;
     position: fixed;
     z-index: -1;
+    //background-image: url("/images/mountain.jpg");
+    filter: blur(0px);
 }
 
 .filler {
@@ -131,12 +138,44 @@ nav ul a {
     color: $accent;
 }
 
+.accent{
+  color: $accent;
+}
+
 .filler h1 {
     font-size: 100px;
 }
 
 .filler p {
     font-size: 50px;
+    position: relative;
+    width: 400px;
+}
+
+$bg-col: #{$off-white};
+.title-bg {
+    margin-top: 50px;
+    background-color: $bg-col;
+    left: 0;
+    height: 1em;
+    position: absolute;
+    right: 0;
+    top: 0.35em;
+    z-index: -1;
+    width: 250px;
+    border-radius: 2px;
+}
+
+.subtitle-bg {
+    background-color: $bg-col;
+    left: 0;
+    height: 0.4em;
+    position: absolute;
+    right: 0;
+    top: 0.5em;
+    z-index: -1;
+    width: 380px;
+    border-radius: 2px;
 }
 
 #typed {
@@ -151,7 +190,7 @@ nav ul a {
   About
 **************/
 
-$about-padding: 100px;
+
 .about {
     font-family: "Poppins";
     margin-left: $nav-width-50;
@@ -159,8 +198,8 @@ $about-padding: 100px;
     margin-bottom: 50px;
     margin-top: -50px;
     max-width: calc(100% - #{$nav-width-50});
-    background-color: $accent-light;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: $accent-dark;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 8px 10px 0 rgba(0, 0, 0, .1);
     padding-bottom: 50px;
     color: $white;
 }
@@ -208,43 +247,118 @@ $about-padding: 100px;
     margin-right: 50px;
     margin-bottom: 50px;
     max-width: calc(100% - #{$nav-width-50});
-    height: 300px;
-    background-color: $accent-light;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 50px;
+    background-color: $accent-dark;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 8px 10px 0 rgba(0, 0, 0, .1);
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     color: $white;
 }
 
-.wrap {
-    padding-right: 50px;
-}
-
-.projects-text {
-    padding-left: calc(50% - 350px);
-    padding-right: calc(50% - 350px);
-}
-
 .projects h1 {
-    width: calc(100% - 300px);
-    padding: 50px;
+    width: calc(100%);
     font-size: 100px;
     float: left;
 }
 
-.projects-pic {
-    margin-top: 50px;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-size: 201px 201px;
-    background-image: url("/images/logo2.png");
-    float: right;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+.boxes {
 }
 
-.projects p {
-    margin-top: 25px;
-    margin-bottom: 25px;
+.box{
+  vertical-align: top;
+  margin-top: 25px;
+  display: inline-block;
+  background-color: $accent-light;
+  min-height: 300px;
+  padding: 30px;
+  width: calc(50% - 90px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 8px 10px 0 rgba(0, 0, 0, .1);
+  position: relative;
+  transition: all .35s ease;
 }
+
+.box:hover{
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .2), 0 8px 10px 0 rgba(0, 0, 0, .2);
+  transition: all .35s ease;
+}
+
+.box h3{
+  font-size: 24px;
+  color: $white;
+}
+.box p{
+  padding-bottom:100px;
+  font-size: 22px;
+  color: $white;
+}
+
+
+#box-left{
+  margin-right: 25px;
+}
+#box-right{
+  margin-left: 25px;
+}
+
+.icons {
+  position: absolute;
+  bottom: 25px;
+}
+
+$icon-bg-dimen: 75px;
+.icon-bg{
+  margin-right: 5px;
+  display: inline-block;
+  width: $icon-bg-dimen;
+  height: $icon-bg-dimen;
+  background-color: $white;
+  border-radius: 100%;
+  position: relative;
+}
+
+.icon{
+  margin-left: 12px;
+  margin-top: 12px;
+  height: 50px;
+  width: 50px;
+  background-size: 51px 51px;
+  margin-right: 15px;
+}
+
+#hidden {
+  visibility: hidden;
+}
+
+#html{
+  background-image: url("/images/logos/HTML_Logo.png");
+}
+#css{
+  background-image: url("/images/logos/CSS_logo.png");
+}
+#js{
+    background-image: url("/images/logos/js_logo.png");
+}
+#android{
+  background-image: url("/images/logos/android_logo.png");
+}
+#csharp{
+  background-image: url("/images/logos/csharp_logo.png");
+}
+#unity{
+    background-image: url("/images/logos/unity_logo.png");
+}
+#java{
+    background-image: url("/images/logos/java_logo.png");
+}
+#python{
+    background-image: url("/images/logos/python_logo.png");
+}
+#sqlite{
+    background-image: url("/images/logos/sqlite_logo.png");
+}
+
+
 
 /**************
   Contact
@@ -256,14 +370,10 @@ $about-padding: 100px;
     margin-right: 50px;
     margin-bottom: 50px;
     max-width: calc(100% - #{$nav-width-50});
-    background-color: $accent-light;
+    background-color: $accent-dark;
     padding-bottom: 70px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 8px 10px 0 rgba(0, 0, 0, .1);
     color: $white;
-}
-
-.wrap {
-    padding-right: 50px;
 }
 
 .contact-text {
@@ -383,6 +493,19 @@ $footer-padding: 7px;
   Media Queries
 **************/
 
+@media only screen and (max-width: 1300px) {
+    .box {
+      display: block;
+      width: 90%;
+    }
+    #box-left{
+      margin-right: 0;
+    }
+    #box-right{
+      margin-left: 0;
+    }
+}
+
 @media only screen and (max-width: 1050px) {
     nav li {
         transition: all .0s ease;
@@ -390,15 +513,15 @@ $footer-padding: 7px;
     nav {
         visibility: hidden;
     }
-    #small-nav{
-      visibility: visible;
+    #small-nav {
+        visibility: visible;
     }
     .contact,
     .projects,
     .about,
     .filler {
-      margin-left: 50px;
-      max-width: calc(100% - 100px);
+        margin-left: 50px;
+        max-width: calc(100% - 100px);
     }
 }
 
@@ -416,21 +539,84 @@ $footer-padding: 7px;
     .email li {
         display: block;
     }
+    .filler p {
+        font-size: 36px;
+        width: 280px;
+    }
+    .subtitle-bg {
+        width: 272px;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+    #typed {
+        font-size: 85px;
+    }
+    .typed-cursor {
+        font-size: 85px;
+    }
+    .title-bg {
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 336px) {
+  .filler p {
+      font-size: 24px;
+      width: 190px;
+  }
+  .subtitle-bg {
+      width: 180px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+    #typed {
+        font-size: 70px;
+    }
+    .typed-cursor {
+        font-size: 85px;
+    }
+    .title-bg {
+        width: 165px;
+    }
+
+
 }
 
 @media only screen and (max-width: 500px) {
     .about h1,
     .projects h1,
     .contact h1 {
-        width: calc(100% - 100px);
+        width: calc(100% - 20px);
         padding: 20px;
         font-size: 40px;
     }
-    #typed {
-        font-size: 70px;
-    }
 
-    .typed-cursor {
-        font-size: 85px;
+
+
+    .about,
+    .contact,
+    .projects{
+      padding: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      max-width: calc(100% - 20px);
+    }
+    .box {
+      width: calc(100% - 60px);
+    }
+    .icon {
+      width: 30px;
+      height: 30px;
+      background-size: 31px 31px;
+      margin-left: 10px;
+      margin-top: 9px;
+    }
+    .icon-bg{
+      width: 50px;
+      height: 50px;
     }
 }

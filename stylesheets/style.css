@@ -106,7 +106,7 @@ nav ul ul li a {
 ----- Banner
 -----------------------------*/
 .banner {
-  background-image: url("../images/banner.png");
+  background-image: url("/images/banner.png");
   background-size: cover;
   background-position: bottom center;
   height: 700px;
@@ -303,13 +303,13 @@ nav ul ul li a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.19); }
 
 #photo0 {
-  background-image: url("../images/me2.png"); }
+  background-image: url("/images/me2.png"); }
 
 #photo1 {
-  background-image: url("../images/logo2.png"); }
+  background-image: url("/images/logo2.png"); }
 
 #photo2 {
-  background-image: url("../images/email.png"); }
+  background-image: url("/images/email.png"); }
 
 /* ----------------------------
 ----- Email
