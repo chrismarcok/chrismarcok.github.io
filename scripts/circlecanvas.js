@@ -23,12 +23,20 @@ addEventListener("mousemove", event => {
     mouse.y = event.clientY;
 });
 
+
+var width = $(window).width(),
+    height = $(window).height();
+
 addEventListener('resize', () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
-    init();
+    if($(window).width() != width && $(window).height() != height){
+      init();
+    }
 });
+
+
 
 function randomIntFromRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -95,7 +103,7 @@ function init() {
 
     for (let i = 0; i < 300; i++) {
         const radius = (Math.random() * 2) + 6;
-        particles.push(new Particle(canvas.width, canvas.height, radius, randomColor(colors)));
+        particles.push(new Particle(innerWidth, innerHeight, radius, randomColor(colors)));
     }
 }
 
@@ -108,6 +116,8 @@ function animate() {
         particle.update();
     });
 }
+
+
 
 init();
 animate();
