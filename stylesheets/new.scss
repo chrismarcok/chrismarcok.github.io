@@ -8,8 +8,7 @@ $accent: #FF6F59;
 $accent-dark: #DB504A;
 $accent-light: #e16b66;
 
-
-
+$neongreen: #39ff14;
 
 * {
     margin: 0px;
@@ -19,6 +18,50 @@ $accent-light: #e16b66;
 a {
     text-decoration: none;
 }
+
+/************
+  Highlighter
+***********/
+$highlight-color: #{$neongreen};
+.underlined {
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 30px;
+  color: $accent;
+  flex: 1;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .1s;
+  &:hover, {
+    background-size: 100% 100%;
+  }
+  &--thin {
+    background-image: linear-gradient(to right, black 0, black 100%);
+  }
+  &--thick {
+    background-position: 0 -0.1em;
+    transition: background .3s;
+  }
+  &--offset {
+    background-position: 0 0.2em;
+    //didn't find another solution than mask the underline shape by a box shadow with the same color than the bg
+    box-shadow: inset 0 -.5em 0 0 white;
+  }
+  &--gradient {
+    background-position: 0 -0.1em;
+    background-image: linear-gradient(to right, yellow 0, $neongreen 100%);
+  }
+  &--reverse {
+    background-position: 100% -0.1em;
+    transition: background 1s; //yep, that's a long link
+    background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  }
+}
+
 
 /**************
   Nav
@@ -283,8 +326,8 @@ $bg-col: #{$off-white};
   transition: all .35s ease;
 }
 
-.box h3{
-  font-size: 24px;
+.projects h3{
+  font-size: 32px;
   color: $white;
 }
 .box p{
@@ -436,37 +479,6 @@ $icon-bg-dimen: 75px;
     transition: all .15s ease;
 }
 
-/* ----------------------------
------ Resume && Additional Docs
------------------------------*/
-
-.resume {
-    margin-top: 30px;
-}
-
-.resume h4 {
-    margin-bottom: 15px;
-}
-
-.resume a {
-    margin: 0 5px 0 5px;
-    background-color: $white;
-    text-decoration: none;
-    font-size: 30px;
-    font-family: 'Poppins', Papyrus, sans-serif;
-    padding: 10px;
-    text-align: center;
-    border-radius: 3px;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all .15s ease;
-}
-
-.resume a:hover {
-    background: $darkgrey;
-    color: $white;
-    transition: all .15s ease;
-}
 
 /**************
   Footer
@@ -525,13 +537,20 @@ $footer-padding: 7px;
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .about h1,
     .projects h1,
     .contact h1 {
         width: calc(100% - 100px);
         padding: 50px;
         font-size: 70px;
+    }
+    .projects h1{
+      padding: 0px;
+      width: calc(100%);
+    }
+    .projects h3{
+      font-size: 24px;
     }
     .contact h3 {
         font-size: 16px;
@@ -546,44 +565,12 @@ $footer-padding: 7px;
     .subtitle-bg {
         width: 272px;
     }
-
-}
-
-
-@media only screen and (max-width: 400px) {
-    #typed {
-        font-size: 85px;
+    .email a {
+      display:block;
+      width: calc(100% - 100px);
+      margin: auto;
+      margin-bottom: 10px;
     }
-    .typed-cursor {
-        font-size: 85px;
-    }
-    .title-bg {
-        width: 210px;
-    }
-}
-
-@media only screen and (max-width: 336px) {
-  .filler p {
-      font-size: 24px;
-      width: 190px;
-  }
-  .subtitle-bg {
-      width: 180px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-    #typed {
-        font-size: 70px;
-    }
-    .typed-cursor {
-        font-size: 85px;
-    }
-    .title-bg {
-        width: 165px;
-    }
-
-
 }
 
 @media only screen and (max-width: 500px) {
@@ -594,9 +581,6 @@ $footer-padding: 7px;
         padding: 20px;
         font-size: 40px;
     }
-
-
-
     .about,
     .contact,
     .projects{
@@ -604,6 +588,10 @@ $footer-padding: 7px;
       margin-left: 10px;
       margin-right: 10px;
       max-width: calc(100% - 20px);
+    }
+
+    .projects h3{
+      padding: 30px;
     }
     .box {
       width: calc(100% - 60px);
@@ -618,5 +606,39 @@ $footer-padding: 7px;
     .icon-bg{
       width: 50px;
       height: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #typed {
+        font-size: 85px;
+    }
+    .typed-cursor {
+        font-size: 85px;
+    }
+    .title-bg {
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 347px) {
+  .filler p {
+      font-size: 24px;
+      width: 190px;
+  }
+  .subtitle-bg {
+      width: 180px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+    #typed {
+        font-size: 70px;
+    }
+    .typed-cursor {
+        font-size: 85px;
+    }
+    .title-bg {
+        width: 165px;
     }
 }
