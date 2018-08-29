@@ -31,7 +31,9 @@ addEventListener('resize', () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
-    if($(window).width() != width && $(window).height() != height){
+    if($(window).width() != width){
+      width = $(window).width();
+      height = $(window).height();
       init();
     }
 });
@@ -110,7 +112,14 @@ function init() {
 function animate() {
 
     requestAnimationFrame(animate);
-    c.fillStyle = 'rgba(255,255,255, .05)';
+
+    if ($(window).width() < 768){
+        c.fillStyle = 'rgba(255,255,255, 1)';
+    }
+    else {
+        c.fillStyle = 'rgba(255,255,255, .05)';
+    }
+    
     c.fillRect(0, 0, innerWidth + 2000, innerHeight + 2000);
     particles.forEach(particle => {
         particle.update();

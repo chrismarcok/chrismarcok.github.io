@@ -294,18 +294,19 @@ $bg-col: #{$off-white};
     background-color: $accent-dark;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 8px 10px 0 rgba(0, 0, 0, .1);
     padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+
     color: $white;
 }
 
 .projects h1 {
     width: calc(100%);
     font-size: 100px;
-    float: left;
+    padding-left: 50px;
 }
 
 .boxes {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .box{
@@ -329,6 +330,9 @@ $bg-col: #{$off-white};
 .projects h3{
   font-size: 32px;
   color: $white;
+  vertical-align: top;
+  margin-left: 10px;
+
 }
 .box p{
   padding-bottom:100px;
@@ -336,6 +340,23 @@ $bg-col: #{$off-white};
   color: $white;
 }
 
+#project-subtitle{
+  padding-left: 50px;
+  margin-left: 0;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.h3-icon {
+  background-size: 51px 51px;
+  background-image: url("/images/logos/code_logo.png");
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+
+}
 
 #box-left{
   margin-right: 25px;
@@ -369,7 +390,7 @@ $icon-bg-dimen: 75px;
   margin-right: 15px;
 }
 
-#hidden {
+.hidden {
   visibility: hidden;
 }
 
@@ -546,11 +567,13 @@ $footer-padding: 7px;
         font-size: 70px;
     }
     .projects h1{
-      padding: 0px;
+      padding: 0;
+      padding-left: 50px;
       width: calc(100%);
     }
     .projects h3{
       font-size: 24px;
+
     }
     .contact h3 {
         font-size: 16px;
@@ -570,6 +593,11 @@ $footer-padding: 7px;
       width: calc(100% - 100px);
       margin: auto;
       margin-bottom: 10px;
+    }
+    .h3-icon{
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
     }
 }
 
@@ -595,6 +623,10 @@ $footer-padding: 7px;
     }
     .box {
       width: calc(100% - 60px);
+    }
+    .boxes{
+      padding-left: 0%;
+      padding-right: 0%;
     }
     .icon {
       width: 30px;
@@ -641,4 +673,39 @@ $footer-padding: 7px;
     .title-bg {
         width: 165px;
     }
+}
+
+/**************
+  Sketchy ass delays
+**************/
+
+.delay100{
+  animation-delay: .1s;
+}
+.delay200{
+  animation-delay: .2s;
+}
+.delay300{
+  animation-delay: .3s;
+}
+.delay400{
+  animation-delay: .4s;
+}
+.delay500{
+  animation-delay: .5s;
+}
+.delay600{
+  animation-delay: .6s;
+}
+.delay700{
+  animation-delay: .7s;
+}
+.delay800{
+  animation-delay: .8s;
+}
+.delay900{
+  animation-delay: .9s;
+}
+.delay1000{
+  animation-delay: 1s;
 }

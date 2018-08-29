@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
 
-    <link rel="icon" href="/images/logo4.png">
+    <link rel="icon" href="/images/logo5.png">
 
     <!--  ##########################
          - Scripts
@@ -81,7 +82,7 @@
                 backDelay: 2500,
                 cursorChar: '_',
                 autoInsertCss: true,
-                typeSpeed: 300,
+                typeSpeed: 100,
                 backSpeed: 35
             });
         </script>
@@ -122,13 +123,17 @@
         <div class="wrap">
             <h1>Projects_</h1>
         </div>
-        <h3>Click a project to view more about it.</h3>
+        <h3 id="project-subtitle">Click a project to view more about it.</h3>
 
         <section class="boxes">
 
             <a href="/bb.html" target="_blank">
             <div id="box-left" class="box">
-                <h3>Budget Buddy</h3>
+                <div>
+                    <div class="h3-icon inline-block hidden" id="projectLogo0"></div>
+                    <h3 class="inline-block">Budget Buddy</h3>
+                </div>
+
                 <p>Android Studio, Java, SQLite. Creating an Android app to help create and maintain daily, weekly, or monthly budgets.</p>
                 <div class="icons">
                   <div class="icon-bg">
@@ -150,7 +155,11 @@
 
           <a href="/redirect/gplay.html" target="_blank">
             <div id="box-right" class="box">
-                <h3>Sky Leaper</h3>
+              <div>
+                  <div class="h3-icon inline-block hidden" id="projectLogo1"></div>
+                  <h3 class="inline-block">Sky Leaper</h3>
+              </div>
+
                 <p>Platformer style mobile game created by a team of 5 individuals. It was developed in C# using the Unity Game Engine.</p>
                 <div class="icons">
                   <div class="icon-bg">
@@ -171,7 +180,11 @@
 
           <a href="/redirect/githubWebsite.html" target="_blank">
             <div id="box-left" class="box">
-                <h3>Personal Website</h3>
+
+                <div>
+                    <div class="h3-icon inline-block hidden" id="projectLogo2"></div>
+                    <h3 class="inline-block">Personal Website</h3>
+                </div>
                 <p>You're looking right at it.</p>
                 <div class="icons">
                   <div class="icon-bg">
@@ -193,7 +206,11 @@
 
           <a href="/redirect/githubChess.html" target="_blank">
             <div id="box-right" class="box">
-                <h3>ChessMaster</h3>
+
+                <div>
+                    <div class="h3-icon inline-block hidden" id="projectLogo3"></div>
+                    <h3 class="inline-block">ChessMaster</h3>
+                </div>
                 <p>A 4 player spin off on the classic game of chess. It was built using all original code in the Java language.
                   Created using the extreme program methodology.</p>
                 <div class="icons">
@@ -207,7 +224,11 @@
 
             <a href="/redirect/githubChess.html" target="_blank">
             <div id="box-left" class="box">
-                <h3>Calculator</h3>
+
+                <div>
+                    <div class="h3-icon inline-block hidden" id="projectLogo4"></div>
+                    <h3 class="inline-block">Calculator</h3>
+                </div>
                 <p>A Java based calculator for Android which uses
                   postfix notation and stacks to calculate simple mathematical operations. This application was built using Android Studio.</p>
                 <div class="icons">
@@ -225,7 +246,11 @@
 
           <a href="/redirect/githubEuler.html" target="_blank">
             <div id="box-right" class="box">
-                <h3>Project Euler</h3>
+              <div>
+                  <div class="h3-icon inline-block hidden" id="projectLogo5"></div>
+                  <h3 class="inline-block">Project Euler</h3>
+              </div>
+
                 <p>Over 25 of solutions organized neatly within a github repository.
                   Majority of these solutions are written in the Python 3 language.</p>
                 <div class="icons">
@@ -239,7 +264,10 @@
 
           <a href="/redirect/githubLeet.html" target="_blank">
           <div id="box-left" class="box">
-              <h3>LeetCode</h3>
+              <div>
+                  <div class="h3-icon inline-block hidden" id="projectLogo6"></div>
+                  <h3 class="inline-block">LeetCode</h3>
+              </div>
               <p>My solutions to LeetCode problems, organized neatly in a github repository.
                 Majority of these solutions are written in the Python 3 language.</p>
               <div class="icons">
@@ -261,7 +289,11 @@
 
         <a href="/canvas/canvas.html" target="_blank">
           <div id="box-right" class="box">
-              <h3>Canvas</h3>
+
+              <div>
+                  <div class="h3-icon inline-block hidden" id="projectLogo7"></div>
+                  <h3 class="inline-block">Canvas</h3>
+              </div>
               <p>Messing around with the HTML canvas.</p>
               <div class="icons">
                 <div class="icon-bg">

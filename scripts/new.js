@@ -22,7 +22,17 @@ for (let item of anchorlinks) { // relitere
             contact = $('#Contact'),
             aboutLi = $('#about-li'),
             projectLi = $('#project-li'),
-            contactLi = $('#contact-li');
+            contactLi = $('#contact-li'),
+            logo0 = $('#projectLogo0'),
+            logo1 = $('#projectLogo1'),
+            logo2 = $('#projectLogo2'),
+            logo3 = $('#projectLogo3'),
+            logo4 = $('#projectLogo4'),
+            logo5 = $('#projectLogo5'),
+            logo6 = $('#projectLogo6'),
+            logo7 = $('#projectLogo7');
+        var logos = [logo0, logo1, logo2, logo3,
+        logo4, logo5, logo6, logo7]
 
         documentElem.on('scroll', function() {
             var currentScrollTop = $(this).scrollTop();
@@ -34,12 +44,19 @@ for (let item of anchorlinks) { // relitere
                 aboutLi.removeClass('accent');
             }
 
-            console.log(contact.offset().top - contact.height() - 400);
-            console.log("currentScrollTop " + currentScrollTop);
-
             if (currentScrollTop > project.offset().top){
                 projectLi.addClass('accent');
                 aboutLi.removeClass('accent');
+
+                // for (let item of logos){
+                //   item.addClass('animated ' + "jackInTheBox");
+                //   var wait = setTimeout(1000);
+                // }
+                for (var i = 0; i < logos.length; i++){
+                  logos[i].removeClass("hidden");
+                  logos[i].addClass("animated " + "jackInTheBox" + " delay" + (i+1)*100);
+                }
+
             }
             else{
                 projectLi.removeClass('accent');
