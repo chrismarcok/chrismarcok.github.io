@@ -31,10 +31,10 @@ addEventListener('resize', () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
-    if($(window).width() != width){
-      width = $(window).width();
-      height = $(window).height();
-      init();
+    if ($(window).width() != width) {
+        width = $(window).width();
+        height = $(window).height();
+        init();
     }
 });
 
@@ -54,8 +54,8 @@ function Particle(x, y, radius, color) {
     this.radius = radius;
     this.color = color;
     this.radians = Math.random() * 100;
-    this.distanceFromCenter = randomIntFromRange(50, Math.max(canvas.width,canvas.height));
-    this.velocity = 1/this.distanceFromCenter;
+    this.distanceFromCenter = randomIntFromRange(50, Math.max(canvas.width, canvas.height));
+    this.velocity = 1 / this.distanceFromCenter;
     this.bool = false;
     this.lastPoint = {
         x: 0,
@@ -78,10 +78,9 @@ function Particle(x, y, radius, color) {
         this.x = this.lastMouse.x + Math.sin(this.radians) * this.distanceFromCenter;
         this.y = this.lastMouse.y + Math.cos(this.radians) * this.distanceFromCenter;
         this.radians += this.velocity;
-        if (this.bool){
+        if (this.bool) {
             this.draw();
-        }
-        else {
+        } else {
             this.bool = true;
         }
     }
@@ -90,7 +89,7 @@ function Particle(x, y, radius, color) {
         c.beginPath();
         c.strokeStyle = this.color;
         c.lineWidth = this.radius;
-        c.lineCap="round";
+        c.lineCap = "round";
         c.moveTo(this.lastPoint.x, this.lastPoint.y);
         c.lineTo(this.x, this.y);
         c.stroke();
@@ -113,13 +112,12 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    if ($(window).width() < 768){
+    if ($(window).width() < 768) {
         c.fillStyle = 'rgba(255,255,255, 1)';
-    }
-    else {
+    } else {
         c.fillStyle = 'rgba(255,255,255, .05)';
     }
-    
+
     c.fillRect(0, 0, innerWidth + 2000, innerHeight + 2000);
     particles.forEach(particle => {
         particle.update();
