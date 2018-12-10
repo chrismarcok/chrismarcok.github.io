@@ -5,9 +5,8 @@ $lightgrey: #778899;
 $grey: #C0C0C0;
 $darkgrey: #2F4F4F;
 $accent: #FF6F59;
-$accent-dark: #DB504A;
+$accent-dark: #db504a;
 $accent-light: #e16b66;
-
 $neongreen: #39ff14;
 
 * {
@@ -421,6 +420,9 @@ $icon-bg-dimen: 75px;
 #sqlite{
     background-image: url("/images/logos/sqlite_logo.png");
 }
+#react{
+    background-image: url("/images/logos/react_logo.png");
+}
 
 
 
@@ -708,4 +710,7 @@ $footer-padding: 7px;
 }
 .delay1000{
   animation-delay: 1s;
+}
+.delay1100{
+  animation-delay: 1.1s;
 }
