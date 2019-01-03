@@ -383,6 +383,9 @@ nav ul a {
 #react {
   background-image: url("/images/logos/react_logo.png"); }
 
+#node {
+  background-image: url("/images/logos/node_logo.png"); }
+
 /**************
   Contact
 **************/
@@ -634,3 +637,11 @@ nav ul a {
 .delay1100 {
   -webkit-animation-delay: 1.1s;
   animation-delay: 1.1s; }
+
+.delay1200 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
+
+.delay1300 {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s; }
