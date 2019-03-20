@@ -33,8 +33,9 @@ for (let item of anchorlinks) { // relitere
             logo7 = $('#projectLogo7'),
             logo8 = $('#projectLogo8');
             logo9 = $('#projectLogo9');
+            logo10 = $('#projectLogo10');
         var logos = [logo0, logo1, logo2, logo3,
-        logo4, logo5, logo6, logo7, logo8,  logo9]
+        logo4, logo5, logo6, logo7, logo8,  logo9, logo10]
 
         documentElem.on('scroll', function() {
             var currentScrollTop = $(this).scrollTop();
